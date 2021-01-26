@@ -7,16 +7,23 @@
 
 body {
 	font-family: "Helvetica";
-	background-color: #FEFD02;
+	background-color: #000;
 }
 
 h1 {
 	font-family: 'Audiowide';
 	color: white;
-    text-shadow: 2px 2px 1px #6985AD, 0px 3px 6px #3A4A60;
+    text-shadow: 0rem 0rem 3rem #f40, 0rem 0rem 5rem #f40, 0rem 0rem 6rem #f40;
     font-size: 77px;
 	text-align: center;
-	animation: neon 1s infinite;
+}
+
+.logo {
+	margin: 0 auto;
+	width: 52rem;
+	border: solid .4rem #fff;
+	border-radius: 2rem;
+	animation: pisca 1.5s infinite alternate;
 }
 
 footer {
@@ -24,24 +31,22 @@ footer {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background: #CBCA01;
 	text-align: center;
 }
 
-@keyframes neon {
-	0% {
-	  text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-	  0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-	  0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+footer>span{ text-shadow: 0rem 0rem 0.5rem #07c737 }
+
+
+@keyframes pisca {
+	0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+		box-shadow: 
+			0rem .1rem .8rem #fff,
+		  	0rem 0rem 5rem#08f,
+			inset 0rem 0rem 2rem #08f
 	}
-	50% {
-	  text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-	  0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
-	  0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+
+	20%, 24%, 55% {
+		box-shadow: none;
 	}
-	100% {
-	  text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-	  0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-	  0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
-	}
-  }
+
+}
