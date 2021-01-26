@@ -12,14 +12,15 @@ body {
 
 h1 {
 	font-family: 'Audiowide';
-	color: white;
-    text-shadow: 0rem 0rem 3rem #f40, 0rem 0rem 5rem #f40, 0rem 0rem 6rem #f40;
-    font-size: 77px;
+	font-size: 2rem;
+	font-style: italic;
 	text-align: center;
+    text-shadow: 0rem 0rem 3rem #f40, 0rem 0rem 5rem #f40, 0rem 0rem 6rem #f40;
+	color: white;
 }
 
 .logo {
-	margin: 0 auto;
+	margin: 10rem auto;
 	width: 52rem;
 	border: solid .4rem #fff;
 	border-radius: 2rem;
