@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root {
+    --wave-dark: #282828;
+    --wave-dark2: #363636;
+}
+
 body {
     margin: 0 auto;
     text-align: center;
@@ -22,12 +27,12 @@ div.wave-1 {
     width: 260px;
     height: 10px;
     margin: 0 auto;
-    background: black;
+    background: var(--wave-dark);
     position: relative;
     border-radius: 22px;
-    animation: wave 3s ease-out infinite;
+    animation: wavy 2.5s ease-out infinite;
     /* Safari and Chrome */
-    -webkit-animation: wave 3s infinite;
+    -webkit-animation: wavy 2.5s ease-out infinite;
 }
 
 div.wave-2 {
@@ -35,11 +40,11 @@ div.wave-2 {
     height: 10px;
     margin: 0 auto;
     margin-top: 8px;
-    background: black;
+    background: var(--wave-dark);
     position: relative;
     border-radius: 22px;
-    animation: wave 3s ease-out infinite;
-    -webkit-animation: wave 3s infinite;
+    animation: wavy 2.5s ease-out infinite;
+    -webkit-animation: wavy 2.5s ease-out infinite;
 }
 
 div.wave-3 {
@@ -47,11 +52,11 @@ div.wave-3 {
     height: 10px;
     margin: 0 auto;
     margin-top: 8px;
-    background: black;
+    background: var(--wave-dark2);
     position: relative;
     border-radius: 22px;
-    animation: wave 3s ease-out infinite;
-    -webkit-animation: wave 3s infinite;
+    animation: wavy-2 2.5s ease-out infinite;
+    -webkit-animation: wavy-2 2.5s ease-out infinite;
 }
 
 div.wave-4 {
@@ -59,38 +64,61 @@ div.wave-4 {
     height: 10px;
     margin: 0 auto;
     margin-top: 8px;
-    background: black;
+    background: var(--wave-dark2);
     position: relative;
     border-radius: 22px;
-    animation: wave 3s ease-out infinite;
-    -webkit-animation: wave 3s infinite;
+    animation: wavy-2 2.5s ease-out infinite;
+    -webkit-animation: wavy-2 2.5s ease-out infinite;
 }
 
 canvas {
     margin-top: 12px;
 }
 
-@keyframes wave {
+@keyframes wavy {
     from {
         top: 0px;
         opacity: 1;
     }
     to {
         top: 46px;
-        opacity: 0
+        transform: scale(0.8);
+        opacity: 0;
     }
 }
 
-
-/* Safari and Chrome */
-
-@-webkit-keyframes wave {
+@-webkit-keyframes wavy {
     from {
         top: 0px;
         opacity: 1;
     }
     to {
         top: 46px;
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes wavy-2 {
+    from {
+        top: 0px;
+        opacity: 1;
+    }
+    to {
+        top: 46px;
+        transform: scale(0.6);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes wavy-2 {
+    from {
+        top: 0px;
+        opacity: 1;
+    }
+    to {
+        top: 46px;
+        transform: scale(0.6);
         opacity: 0;
     }
 }
