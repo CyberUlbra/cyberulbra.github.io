@@ -1,53 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-
-:root {
-	--shadow-color:#d59eee;
-	--shadow-color-light: #93efff;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 body {
-	font-family: "Helvetica";
-	background-color: #000;
+    margin: 0 auto;
+    text-align: center;
+    background: #feee80;
 }
 
 h1 {
-	font-family: 'Audiowide';
-	font-size: 2rem;
-	font-style: italic;
-	text-align: center;
-    text-shadow: 0rem 0rem 3rem #f40, 0rem 0rem 5rem #f40, 0rem 0rem 6rem #f40;
-	color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 72px;
+    text-align: center;
 }
 
-.logo {
-	margin: 10rem auto;
-	width: 52rem;
-	border: solid .4rem #fff;
-	border-radius: 2rem;
-	animation: pisca 1.5s infinite alternate;
+header,
+.waves {
+    margin: 0 auto;
+    text-align: center;
+    width: 512px;
+}
+
+div.wave-1 {
+    width: 260px;
+    height: 10px;
+    margin: 0 auto;
+    background: black;
+    position: relative;
+    border-radius: 22px;
+    animation: wave 3s ease-out infinite;
+    /* Safari and Chrome */
+    -webkit-animation: wave 3s infinite;
+}
+
+div.wave-2 {
+    width: 220px;
+    height: 10px;
+    margin: 0 auto;
+    margin-top: 8px;
+    background: black;
+    position: relative;
+    border-radius: 22px;
+    animation: wave 3s ease-out infinite;
+    -webkit-animation: wave 3s infinite;
+}
+
+div.wave-3 {
+    width: 175px;
+    height: 10px;
+    margin: 0 auto;
+    margin-top: 8px;
+    background: black;
+    position: relative;
+    border-radius: 22px;
+    animation: wave 3s ease-out infinite;
+    -webkit-animation: wave 3s infinite;
+}
+
+div.wave-4 {
+    width: 100px;
+    height: 10px;
+    margin: 0 auto;
+    margin-top: 8px;
+    background: black;
+    position: relative;
+    border-radius: 22px;
+    animation: wave 3s ease-out infinite;
+    -webkit-animation: wave 3s infinite;
+}
+
+canvas {
+    margin-top: 12px;
+}
+
+@keyframes wave {
+    from {
+        top: 0px;
+        opacity: 1;
+    }
+    to {
+        top: 46px;
+        opacity: 0
+    }
+}
+
+
+/* Safari and Chrome */
+
+@-webkit-keyframes wave {
+    from {
+        top: 0px;
+        opacity: 1;
+    }
+    to {
+        top: 46px;
+        opacity: 0;
+    }
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 5px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
 }
 
-footer>span{ text-shadow: 0rem 0rem 0.5rem #07c737 }
-
-
-@keyframes pisca {
-	0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-		box-shadow: 
-			0rem .1rem .8rem #fff,
-		  	0rem 0rem 5rem#08f,
-			inset 0rem 0rem 2rem #08f
-	}
-
-	20%, 24%, 55% {
-		box-shadow: none;
-	}
-
+a {
+    text-decoration: none;
+    color: #858618;
 }
